@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ /* body {
+  overflow: hidden;
+}
+
+ #room_container {
+  height: 100vh;
+  margin-right: 0px !important;
+}
+
+#side_panel {
+  height: 100vh;
+  margin-right: 0px !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-bottom: 55px;
+}
+#chatroom_container {
+  height: 100vh;
+  margin-right: 0px !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+} */

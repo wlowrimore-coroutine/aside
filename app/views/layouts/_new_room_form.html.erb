@@ -1,4 +1,4 @@
 <%= form_with(model: @room, remote: true, class:'d-flex') do |f| %>
-  <%= f.text_field :name, autocomplete: 'off' %>
+  <%= f.text_field :name, class:"text-gray-900", autocomplete: 'off' %>
   <%= f.submit data: {disable_with: false} %>
 <% end %>
