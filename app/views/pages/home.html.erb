@@ -1,0 +1,12 @@
+<div>
+  <h1 class="font-bold text-4xl">Aside Chat</h1>
+  <hr/>
+
+  <% if current_user %>
+    <%= link_to "Start Chatting", rooms_path %>
+    <%= button_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete } %>
+  <% else %>
+    <%= link_to "Sign In", new_user_session_path %>
+    <%= link_to "Sign Up", new_user_registration_path %>
+  <% end %>
+</div>
