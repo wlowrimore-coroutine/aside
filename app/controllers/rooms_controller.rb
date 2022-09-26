@@ -9,10 +9,10 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @single_room = Room.find(params[:id])
+
     @room = Room.new
     @rooms = Room.public_rooms
-
-    @single_room = Room.find(params[:id])
     
     @message = Message.new
     @messages = @single_room.messages.order(created_at: :asc)
