@@ -1,5 +1,5 @@
-<div id="chatroom_container" class="container row bg-gray-900 text-white p-6">
-  <div id="side_panel" class="col-md-4 col-sm-4">
+<div class="container bg-gray-900 text-white p-6">
+  <div>
     <h5 class="text-sm tracking-widest font-light mb-2"> <%= current_user.email %></h5>
     <h2 class="text-2xl tracking-wider">Users</h2>
     <%= turbo_stream_from "users" %>
@@ -13,10 +13,10 @@
     </div>
     <%= render 'layouts/new_room_form' %>
   </div>
+</div>
 
-  <div class="room_container" class="col-md-8 col-sm-8 bg-gray-900 text-white p-6">
-    <% if @signle_room %>
-      <h4 class="text-center"> <%= @single_room.name %> </h4>
-    <% end %>
-  </div>
+<div class="w-full bg-gray-900 text-white p-6">
+  <% if @single_room %>
+    <h4 class="text-center"> <%= @single_room.name %> </h4>
+  <% end %>
 </div>
