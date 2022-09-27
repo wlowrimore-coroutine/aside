@@ -9,11 +9,20 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>
+      <%= ".msg-#{current_user&.id}" %> {
+      background-color: #eaeaea;
+      padding: 8px 0 8px 0px;
+      }
+      <%= ".cont-#{current_user&.id}" %> {
+      padding: 8px 0 8px 0px;
+      }
+    </style>
   </head>
 
   <body>
     <%= render "/layouts/header" %>
-    <main class="container flex">
+    <div class="container w-full h-auto flex">
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>
@@ -21,6 +30,6 @@
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
       <%= yield %>
-    </main>
+    </div>
   </body>
 </html>

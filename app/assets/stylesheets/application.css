@@ -15,24 +15,24 @@
  */
 
  body {
-  overflow: hidden;
+  margin-bottom: 20px;
+  height: 100vh;
 }
 
- #room_container {
+.single-room {
+  height: calc(100vh - 150px);
+}
+
+.room-container {
   height: 100vh;
   margin-right: 0px !important;
+  overflow-y: scroll;
 }
 
-#side_panel {
-  height: 100vh;
+.side-panel {
+  height: calc(100vh - 55px);
   margin-right: 0px !important;
   overflow-x: hidden;
   overflow-y: scroll;
   margin-bottom: 55px;
-}
-#chatroom_container {
-  height: 100vh;
-  margin-right: 0px !important;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
