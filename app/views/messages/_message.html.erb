@@ -1,7 +1,7 @@
 <div class="cont-<%= message.user.id %>">
   <div class="msg-<%= message.user.id %>">
     <% unless message.room.is_private %>
-      <h6> <%= message.user.email %> </h6>
+      <p> <%= message.user.email %></p>
     <% end %>
     <%= message.body %>
   </div>
