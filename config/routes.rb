@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :rooms do
     resources :messages
   end
-  root 'pages#home'
+  root 'rooms#index'
   devise_for :users
 
   devise_scope :user do

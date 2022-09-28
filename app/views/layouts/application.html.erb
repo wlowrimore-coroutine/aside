@@ -22,13 +22,14 @@
 
   <body>
     <%= render "/layouts/header" %>
-    <div class="container w-full h-auto flex">
       <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
+        <p class="flex-row text-center py-2 my-2 w-auto bg-green-200"><%= notice %></p>
       <% end %>
       <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
+        <p class="flex-row text-center py-2 my-2 w-auto bg-yellow-200"><%= alert %></p>
       <% end %>
+    <div class="container w-full h-auto flex">
+
       <%= yield %>
     </div>
   </body>
