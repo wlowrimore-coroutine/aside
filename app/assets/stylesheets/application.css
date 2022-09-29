@@ -19,22 +19,26 @@
   height: 100vh;
 }
 
-.single-room {
-  /* height: calc(100vh - 150px); */
+.bottom-border {
+  border-bottom: 1px solid silver;
+}
+
+.s-panel-border {
+  border-right: 1px solid silver;
 }
 
 .room-container {
   height: 100vh;
-  margin-right: 0px !important;
+  /* margin-right: 0px !important; */
   overflow-y: scroll;
 }
 
 .side-panel {
-  /* height: calc(100vh - 55px); */
-  margin-right: 0px !important;
+  height: calc(100vh - 55px);
+  /* margin-right: 0px !important; */
   overflow-x: hidden;
   overflow-y: scroll;
-  /* margin-bottom: 55px; */
+  margin-bottom: 55px;
 }
 
 .init-container {

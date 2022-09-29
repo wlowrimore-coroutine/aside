@@ -1,9 +1,9 @@
-<div class="row">
-  <%= form_with(model: @room, remote: true, class:"py-6",
+<div class="relative h-[100vh] s-panel-border">
+  <%= form_with(model: @room, remote: true, class:"h-full",
     data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset"}) do |f| %>
-    <div class="flex-col w-1/2">
-      <%= f.text_field :name, class:"text-black mx-auto", autocomplete: 'off' %>
-      <%= f.submit data: {disable_with: false} %>
+    <div class="absolute bottom-0 pl-3 pb-3">
+      <%= f.text_field :name, class:"text-black h-[2em] w-[9em]", autocomplete: 'off' %>
+      <%= f.submit 'Create', class:'border border-gray-800 text-[17px] rounded-sm ml-1 px-1', data: {disable_with: false} %>
     </div>
   <% end %>
 </div>

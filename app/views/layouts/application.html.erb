@@ -12,9 +12,11 @@
     <style>
       <%= ".msg-#{current_user&.id}" %> {
       padding-top: 8px;
+      margin-right: 8px;
       }
       <%= ".cont-#{current_user&.id}" %> {
       padding-top: 8px;
+      margin-right: 8px;
       }
     </style>
   </head>
@@ -27,7 +29,7 @@
       <% if alert %>
         <p class="flex-row text-center py-2 my-2 w-auto bg-yellow-200"><%= alert %></p>
       <% end %>
-    <div class="container w-full flex">
+    <div class="relative w-full h-[100vh] flex">
       <%= yield %>
     </div>
   </body>
