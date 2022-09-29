@@ -15,12 +15,12 @@
  */
 
  body {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   height: 100vh;
 }
 
 .single-room {
-  height: calc(100vh - 150px);
+  /* height: calc(100vh - 150px); */
 }
 
 .room-container {
@@ -30,9 +30,24 @@
 }
 
 .side-panel {
-  height: calc(100vh - 55px);
+  /* height: calc(100vh - 55px); */
   margin-right: 0px !important;
   overflow-x: hidden;
   overflow-y: scroll;
-  margin-bottom: 55px;
+  /* margin-bottom: 55px; */
+}
+
+.init-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px #777778 solid;
+  border-radius: 50px;
+  background: #777778;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
 }

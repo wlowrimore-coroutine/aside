@@ -75,3 +75,4 @@ group :test do
 end
 
 gem "devise", "~> 4.8"
+gem "name_of_person"

@@ -1,8 +1,15 @@
 <div class="cont-<%= message.user.id %>">
   <div class="msg-<%= message.user.id %>">
     <% unless message.room.is_private %>
-      <p class="text-[12px] pt-2"> <%= message.user.email %></p>
+    <div class="flex row items-center pt-2">
+      <p class="init-container mx-3"> <%= message.user.name.initials %></p>
+      <%= message.body %>
+    </div>  
     <% end %>
-    <%= message.body %>
+  </div>
+  <div class="flex ml-14">
+    <p class="text-[10px] text-gray-500 tracking-wide mt-[-1%]">Posted on <%= message.created_at.strftime("%m/%d/%Y at %l:%M %p") %></p>
   </div>
 </div>
+                   
+    
