@@ -1,9 +1,7 @@
-<div class="relative h-[85.5vh]">
-  <%= form_with(model: [@single_room, @message], remote: true, class:"pt-6 h-full",
-    data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset"}) do |f| %>
-    <div class="absolute bottom-80 pl-3">
-      <%= f.text_field :body, id: 'chat-text', class:"text-black h-[2em] w-[26em]", autocomplete: 'off' %>
-      <%= f.submit 'Send', data: {disable_with: false}, class:'border border-gray-800 text-[17px] rounded-sm ml-1 px-2' %>
-    </div>
-  <% end %>
-</div>
+<%= form_with(model: [@single_room, @message], remote: true,
+  data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset"}) do |f| %>
+  <div class="absolute inset-x-0 bottom-0 mb-4 px-2 pt-2 w-full flex top-border">
+    <%= f.text_field :body, id: 'chat-text', class:"border w-1/2 h-[28px] mr-2 border-black", autocomplete: 'off' %>
+    <%= f.submit 'Post', data: {disable_with: false}, class:"rounded-sm border border-black px-1" %>
+  </div>
+<% end %>
