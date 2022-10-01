@@ -1,4 +1,4 @@
-<div class="relative w-full h-[100vh]">
+<div id="chatroom_container" class="relative w-full h-[100vh]">
   <div class="absolute h-full w-60 bg-gray-100">
 
     <%# side panel header %>
@@ -11,8 +11,8 @@
     <div id="users_rooms" class="s-panel-border h-full px-4 pt-8">
     
       <%# users list %>
-      <div class="h-auto pb-8">
-        <h2 class="text-2xl tracking-wider">Users</h2>
+      <div class="h-auto pb-14">
+        <h2 class="text-2xl text-gray-400 tracking-wider">Users</h2>
         <%= turbo_stream_from "users" %>
         <div id="users" class="text-sm tracking-wider">
           <%= render @users %>
@@ -20,29 +20,29 @@
       </div>
 
       <%# rooms list %>
-      <div class="h-auto">
-        <h2 class="text-2xl tracking-wider">Rooms</h2>
+      <div class="h-auto w-full">
+        <h2 class="text-2xl text-gray-400 tracking-wider">Rooms</h2>
         <%= turbo_stream_from "rooms" %>
         <div id="rooms" class="text-lg font-bold tracking-wide">
           <%= render @rooms %>
         </div>
       </div>
       <%# create room form %>
-      <div class="">
+      <div>
           <%= render 'layouts/new_room_form' %>
       </div>
     </div>
   </div>
 
   <%# messages container %>
-  <div class="relative inset-x-60 w-[100vw] h-[100vh]">
+  <div class="relative inset-x-60 w-[100vw] h-full overflow-y-hidden">
     <% if @single_room %>
       <div id="single_room" class="w-full">
         <h4 class="bg-gray-100 bottom-border text-2xl font-bold w-full px-14 py-2"><%= @user&.email || @single_room.name %></h4> 
         <%= turbo_stream_from @single_room %>
-        <div id="messages" class="h-auto max-h-[60rem] overflow-y-auto text-sm text-black tracking-wide pt-2 mr-20">
+        <div id="messages" class="h-auto max-h-[56rem] w-full overflow-y-auto text-sm text-black tracking-wide pt-2 mr-20">
           <%= render @messages %>
-        </div>        
+        </div>
           <%= render 'layouts/new_message_form' %>
       </div>
     <% end %>

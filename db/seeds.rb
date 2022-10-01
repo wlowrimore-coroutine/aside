@@ -11,8 +11,8 @@ User.create([{
   first_name: "William",
   last_name: "Lowrimore",
   email: "wlowrimore@coroutine.com",
-  password: "WNTM@family19",
-  password_confirmation: "WNTM@family19"
+  password: "Littlebro77",
+  password_confirmation: "Littlebro77"
 },
 {
   first_name: "Tim",
