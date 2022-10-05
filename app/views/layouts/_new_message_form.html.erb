@@ -1,6 +1,6 @@
 <%= form_with(model: [@single_room, @message], remote: true,
   data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset"}) do |f| %>
-  <div class="absolute bottom-0 mb-2 px-2 pt-2 flex border-t">
+  <div class="mb-2 px-2 pt-2 flex border-t">
     <%= f.text_field :body, id: 'chat-text', class:"border h-[28px] mr-2 border-black", autocomplete: 'off' %>
     <%= f.submit 'Post', data: {disable_with: false}, class:"rounded-sm border border-black px-1 bg-white" %>
   </div>

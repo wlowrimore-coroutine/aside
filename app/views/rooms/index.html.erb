@@ -1,36 +1,35 @@
-<section class="relative grid grid-cols-6 gap-0">
-  <aside id="side_bar" class="col-span-1 h-[95.4vh] border-r">
-    <div class="flex justify-center bg-gray-100 py-4 border-b">
+<section class="relative grid grid-cols-6 gap-0 h-screen">
+  <aside id="side_bar" class="col-span-1 h-screen border-r">
+    <div id='side-header' class="flex justify-center bg-gray-100 py-4 border-b">
       <p class="init-container w-full"><%= current_user.name.initials %></p>
       <p class="pl-2 pt-1"><%= current_user.name %></p>
     </div>
-    <div class="py-6">
-      <h2 class="text-2xl pl-16 text-gray-400 tracking-wider">Users</h2>
+    
+    <div id='side-body' class="py-6 h-screen w-full">
+      <h2 class="text-2xl text-gray-400 tracking-wider">Users</h2>
       <%= turbo_stream_from "users" %>
-      <div id="users" class="text-sm pl-16 pb-6 tracking-wider">
-      <%= render @users %>
-    </div>
-      <hr />
-    <div class="py-6">
-      <h2 class="text-2xl text-gray-400 pl-16 pb-2 tracking-wider">Rooms</h2>
-      <%= turbo_stream_from "rooms" %>
-      <div id="rooms" class="text-sm pl-16 tracking-wider">
-      <%= render @rooms %>
+      <div id="users" class="text-sm h-auto max-h-[56rem] overflow-y-auto pb-6 tracking-wider">
+        <%= render @users %>
+        
+        <hr />
       
-      <%= render "layouts/new_room_form" %>
+        <h2 class="text-2xl text-gray-400 pb-2 tracking-wider">Rooms</h2>
+        <%= turbo_stream_from "rooms" %>
+        <%= render @rooms %>
+      <div class='absolute bottom-0 mb-2 w-[35em]'>
+        <%= render "layouts/new_room_form" %>
+      </div>
     </div>
   </aside>
 
-  <div id="message_window" class="col-span-5 h-[95.4vh]">
+  <div id="message_window" class="col-span-5 h-screen">
     <% if @single_room %>
-      <div id="single_room">
-        <h4 class="bg-gray-100 border-b text-2xl font-bold w-full px-14 py-4"><%= @user&.email || @single_room.name %></h4>
+      <h4 class="bg-gray-100 border-b text-2xl font-bold w-full px-14 py-4"><%= @user&.email || @single_room.name %></h4>
         <%= turbo_stream_from @single_room %>
-        <div id="messages" class="overflow-y-auto h-auto max-h-[56rem] overflow-hidden scroll-m-4 text-sm text-black tracking-wide pt-2 mr-20">
+      <div id="messages" class="overflow-y-auto h-auto max-h-[56rem] overflow-hidden scroll-m-4 text-sm text-black tracking-wide mr-20">
         <%= render @messages %>
-        
-        <%= render "layouts/new_message_form" %>
-      </div>       
+      </div>
+        <%= render "layouts/new_message_form", class:'absolute bottom-0' %>
     <% end %>
   </div>
 </section> 
