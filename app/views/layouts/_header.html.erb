@@ -1,19 +1,9 @@
-<div class="mx-auto px-2 sm:px-6 bg-gray-700 w-screen">
-  <div class="flex py-2 justify-between">
-    <div class="flex items-center sm:hidden">
-    </div>
-    <div class="flex flex-shrink-0 items-center">
-      <h1 class="block w-auto lg:hidden text-blue-300 text-2xl tracking-wider">Aside Chat<h1>
-      <h1 class="hidden w-auto lg:block text-blue-300 text-2xl tracking-wider">Aside Chat<h1>
-    </div>
-    <% if current_user %>
-      <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete }, class:"text-white px-6 py-2 text-sm font-medium tracking-wider" %>
-    <% end %>
+<div class="flex justify-between w-100 bg-gray-800 px-6">
+  <div class="flex flex-shrink-0 items-center">
+    <h1 class="block w-auto lg:hidden text-blue-300 text-2xl tracking-wider">Aside Chat<h1>
+    <h1 class="hidden w-auto lg:block text-blue-300 text-2xl tracking-wider">Aside Chat<h1>
   </div>
+  <% if current_user %>
+    <%= link_to "Sign Out", destroy_user_session_path, data: { turbo_method: :delete }, class:"text-white px-6 py-2 text-sm font-medium tracking-wider" %>
+  <% end %>
 </div>
-        
-        
-        
-        
-
-  

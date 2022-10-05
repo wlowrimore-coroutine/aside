@@ -1,7 +1,7 @@
 <%= form_with(model: @room, remote: true,
   data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset"}) do |f| %>
-  <div class="absolute inset-x-0 bottom-0 mb-4 px-2 pt-2 w-full flex top-border">
-    <%= f.text_field :name, class:"border w-full h-[28px] mr-2 border-black", autocomplete: 'off' %>
+  <div class="absolute bottom-0 mb-2 w-auto px-2 pt-2 flex border-t">
+    <%= f.text_field :name, class:"border h-[28px] mr-2 border-black", autocomplete: 'off' %>
     <%= f.submit 'Create', class:"rounded-sm border border-black px-1", data: {disable_with: false} %>
   </div>
 <% end %>

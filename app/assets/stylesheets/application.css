@@ -13,16 +13,17 @@
  *= require_tree .
  *= require_self
  */
-body {
+
+/* body {
   height: 100vh;
-} 
+}  */
 
 
-.s-panel-border {
+/* .s-panel-border {
   border-right: 1px solid silver;
-}
+} */
 
-.bottom-border {
+/* .bottom-border {
   border-bottom: 1px solid silver;
   width: 100%;
 }
@@ -30,7 +31,12 @@ body {
 .top-border {
   border-top: 1px solid silver;
   width: 100%;
-}
+} */
+
+
+
+
+
 
 /* .side-panel {
   height: calc(100vh - 55px);
@@ -53,5 +59,3 @@ body {
   height: 32px;
   padding: 4px;
 }
-
-
